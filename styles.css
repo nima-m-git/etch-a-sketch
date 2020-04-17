@@ -22,6 +22,11 @@
     display: flexbox;
 }
 
-.button {
+button {
+    font-size: 14px;
+}
 
+.buttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

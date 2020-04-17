@@ -1,9 +1,11 @@
 const container = document.querySelector('.container');
 console.log(container);
 
+let penColor = 'purple';
+let dimension = 16;
 makeGrid();
 
-function makeGrid(dimension=16) {
+function makeGrid() {
     for (i=1 ; i <=dimension**2; i++){
         newDiv = document.createElement('div');
         newDiv.setAttribute('class','grid');
@@ -15,7 +17,7 @@ function makeGrid(dimension=16) {
 }
 
 container.addEventListener('mouseover', function(event) {
-    event.target.style.backgroundColor = 'purple';
+    event.target.style.backgroundColor = penColor;
 })
 
 function reset() {
@@ -24,7 +26,22 @@ function reset() {
         container.removeChild(child);
         child = container.firstElementChild;
     }
+    makeGrid();
+}
 
-    let newSize = prompt('How many pixels per side?');
-    makeGrid(newSize);
+function changeDimension() {
+    dimension = prompt('How many pixels per side?');
+    reset();
+}
+
+function changePenColor() {
+    penColor = prompt('what color do you want the pen?');
+}
+
+function changeBackgroundColor() {
+    let backgroundColor = prompt('what color do you want the background?');
+    const grid = document.querySelectorAll('.grid');
+    grid.forEach(pixel => {
+        pixel.style.backgroundColor = backgroundColor;
+    })
 }
