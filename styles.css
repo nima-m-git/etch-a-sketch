@@ -1,6 +1,7 @@
 .container {
-    width: 500px;
-    height: 500px;
+    width: 50vw;
+    height: 50vw;
+    border: 1px solid black;
 }
 
 .grid {
@@ -17,3 +18,10 @@
     clear: both;
 }
 
+#page {
+    display: flexbox;
+}
+
+.button {
+
+}
