@@ -3,17 +3,26 @@
     <head>
         <link rel='stylesheet' type='text/css' href='styles.css'>
     </head>
+    
+    <header>
+        <h2>Etch-a-Sketch Board!</h2>
+    </header>
+
     <body>
         <div id='page'>
             <div class='buttons'>
-                <button onclick='reset()'>Reset</button>
                 <button onclick='changeDimension()'>Change Dimensions</button>
-                <button onclick='changePenColor()'>Change Pen Color</button>
-                <button onclick='changeBackgroundColor()'>Change Background Color</button>
+
+                <label for='penColor'>Pen Color:</label>
+                <input type='color' value='ff0000' id='penColor'>
+
+                <label for='backgroundColor'>Background Color:</label>
+                <input type='color' value='7fff00' id='backgroundColor'>
             </div>
 
-            <div class='container'>
-
+            <div class='container'></div>
+            <div class='buttons'>
+                <button onclick='reset()'>Reset</button>
             </div>
         </div>
     </body>

@@ -1,3 +1,24 @@
+* {
+    font-family: sans-serif;
+}
+
+header {
+    background: red;
+    background: -webkit-linear-gradient(left, red , orange, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, red, orange, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, red, orange, green, cyan, blue, violet);
+    background: linear-gradient(to right, red , orange, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+}
+
+h2 {
+    margin-left: 6vw;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;    
+}
+
 .container {
     width: 50vw;
     height: 50vw;
