@@ -2,7 +2,7 @@ const container = document.querySelector('.container');
 console.log(container);
 
 let penColor = 'purple'; //default values
-let dimension = 16;
+let dimension = 32;
 
 makeGrid();
 
@@ -24,8 +24,10 @@ function makeGrid() {
     }
 }
 
-container.addEventListener('mouseover', function(event) { //pen coloring squares on mouseover
-    event.target.style.backgroundColor = penColor;
+container.addEventListener('mouseover', function(event) { 
+    if (event.buttons ==1){
+        event.target.style.backgroundColor = penColor;
+    }
 })
 
 function reset() {
