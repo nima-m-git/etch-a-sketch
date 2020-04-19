@@ -12,6 +12,8 @@ penColorWheel.addEventListener('change', changePenColor, false);
 let backgroundColorWheel = document.querySelector('backgroundColor');
 backgroundColor.addEventListener('change', changeBackgroundColor, false);
 
+let randomPen = false;
+
 
 function makeGrid() {
     for (i=1 ; i <=dimension**2; i++){
@@ -26,6 +28,9 @@ function makeGrid() {
 
 container.addEventListener('mouseover', function(event) { 
     if (event.buttons ==1){
+        if (randomPen) {
+            penColor = getRandomColor();
+        }
         event.target.style.backgroundColor = penColor;
     }
 })
@@ -56,7 +61,18 @@ function changeBackgroundColor(event) {
     })
 }
 
+function randomizePen() {
+    randomPen ? randomPen = false : randomPen = true;
+}
 
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 
 
