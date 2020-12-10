@@ -3,13 +3,12 @@
     <head>
         <link rel='stylesheet' type='text/css' href='styles.css'>
     </head>
-    
-    <header>
-        <h2>Etch-a-Sketch Board!</h2>
-    </header>
 
     <body>
-        <div id='page'>
+        <div class='page'>
+            <header>
+                <h2>Etch-a-Sketch Board!</h2>
+            </header>
             <div class='buttons'>
                 <button onclick='changeDimension()'>Change Dimensions</button>
 
@@ -22,7 +21,7 @@
 
             <div class='container'></div>
             <div class='buttons'>
-                <button onclick='randomizePen()'>Random Pen!</button>
+                <button class='randomPen-btn' onclick='randomizePen()'>Random Pen!</button>
                 <button onclick='reset()'>Reset</button>
             </div>
         </div>

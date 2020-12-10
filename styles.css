@@ -2,28 +2,45 @@
     font-family: sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(60deg, rgba(255, 143, 143, 0.637), rgba(227, 255, 127, 0.623)) no-repeat;
+    height: 100%;
+}
+
+.page {
+    margin: 0 auto;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 header {
     background: red;
     background: -webkit-linear-gradient(left, red , orange, green, cyan, blue, violet);
     background: -o-linear-gradient(right, red, orange, green, cyan, blue, violet);
     background: -moz-linear-gradient(right, red, orange, green, cyan, blue, violet);
     background: linear-gradient(to right, red , orange, green, cyan, blue, violet);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 20px;
 }
 
 h2 {
     margin-left: 3vw;
     margin-bottom: 10px;
-    font-size: 32px;
-    font-family: 'Courier New', Courier, monospace;    
+    font-size: 2.5em;
+    font-family: 'Courier New', Courier, monospace;  
 }
 
 .container {
     width: 50vw;
     height: 50vw;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .grid {
@@ -31,7 +48,7 @@ h2 {
     float: left;
     width: 6.25%;
     height: 6.25%;
-    background-color: chartreuse;
+    background-color: white;
 }
 
 .grid:after {
@@ -45,10 +62,26 @@ h2 {
 }
 
 button {
-    font-size: 14px;
+    font-size: 16px;
+    padding: 0.5em 0.7em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgb(172, 172, 172);
 }
 
 .buttons {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.randomPen-btn {
+    background: linear-gradient(to right, red , orange, green, cyan, blue, violet);
+    color: white;
+
 }

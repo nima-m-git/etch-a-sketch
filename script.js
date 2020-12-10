@@ -1,5 +1,4 @@
 const container = document.querySelector('.container');
-console.log(container);
 
 let penColor = 'purple'; //default values
 let dimension = 32;
@@ -13,7 +12,6 @@ let backgroundColorWheel = document.querySelector('backgroundColor');
 backgroundColor.addEventListener('change', changeBackgroundColor, false);
 
 let randomPen = false;
-
 
 function makeGrid() {
     for (i=1 ; i <=dimension**2; i++){
@@ -72,7 +70,7 @@ function getRandomColor() {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-  }
+}
 
 
 
